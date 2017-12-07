@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   FlatList, Platform
 } from 'react-native';
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 
-import {xdateToData, parseDate} from '../interface';
+import { xdateToData, parseDate } from '../interface';
 import styleConstructor from './style';
 import dateutils from '../dateutils';
 import Calendar from '../calendar';
@@ -59,7 +59,7 @@ class CalendarList extends Component {
       initialized: false
     };
     this.lastScrollPosition = -1000;
-    
+
     this.onViewableItemsChangedBound = this.onViewableItemsChanged.bind(this);
     this.renderCalendarBound = this.renderCalendar.bind(this);
   }
@@ -77,7 +77,7 @@ class CalendarList extends Component {
         break;
       }
     }
-    this.listView.scrollToOffset({offset: scrollAmount, animated});
+    this.listView.scrollToOffset({ offset: scrollAmount, animated });
   }
 
   scrollToMonth(m) {
@@ -88,7 +88,7 @@ class CalendarList extends Component {
     const scrollAmount = (calendarHeight * this.pastScrollRange) + (diffMonths * calendarHeight);
     //console.log(month, this.state.openDate);
     //console.log(scrollAmount, diffMonths);
-    this.listView.scrollToOffset({offset: scrollAmount, animated: false});
+    this.listView.scrollToOffset({ offset: scrollAmount, animated: false });
   }
 
   componentWillReceiveProps(props) {
@@ -113,7 +113,7 @@ class CalendarList extends Component {
     });
   }
 
-  onViewableItemsChanged({viewableItems}) {
+  onViewableItemsChanged({ viewableItems }) {
     function rowIsCloseToViewable(index, distance) {
       for (let i = 0; i < viewableItems.length; i++) {
         if (Math.abs(index - parseInt(viewableItems[i].index)) <= distance) {
@@ -147,12 +147,12 @@ class CalendarList extends Component {
     });
   }
 
-  renderCalendar({item}) {
+  renderCalendar({ item }) {
     return (<CalendarListItem item={item} calendarHeight={calendarHeight} {...this.props} />);
   }
 
   getItemLayout(data, index) {
-    return {length: calendarHeight, offset: calendarHeight * index, index};
+    return { length: calendarHeight, offset: calendarHeight * index, index };
   }
 
   getMonthIndex(month) {
@@ -170,7 +170,7 @@ class CalendarList extends Component {
         data={this.state.rows}
         //snapToAlignment='start'
         //snapToInterval={calendarHeight}
-        removeClippedSubviews={Platform.OS === 'android' ? false : true}
+        removeClippedSubviews={false}
         pageSize={1}
         onViewableItemsChanged={this.onViewableItemsChangedBound}
         renderItem={this.renderCalendarBound}
