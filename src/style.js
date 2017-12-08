@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 
 export const foregroundColor = '#ffffff';
 export const backgroundColor = '#f4f4f4';
@@ -20,6 +20,10 @@ export const textDayHeaderFontFamily = 'System';
 export const textDayFontSize = 16;
 export const textMonthFontSize = 16;
 export const textDayHeaderFontSize = 13;
+
+export const textDayFontWeight = 300;
+export const textMonthFontWeight = 300;
+export const textDayHeaderFontWeight = 300;
 
 export const calendarBackground = foregroundColor;
 export const textSectionTitleColor = '#b6c1cd';
