@@ -12,7 +12,7 @@ export default function styleConstructor(theme = {}) {
       alignItems: 'center'
     },
     text: {
-      marginTop: 4,
+      marginTop: 8,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: appStyle.textDayFontWeight,

@@ -1,10 +1,10 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import * as defaultStyle from '../style';
 
 const STYLESHEET_ID = 'stylesheet.calendar.main';
 
-export default function getStyle(theme={}) {
-  const appStyle = {...defaultStyle, ...theme};
+export default function getStyle(theme = {}) {
+  const appStyle = { ...defaultStyle, ...theme };
   return StyleSheet.create({
     container: {
       paddingLeft: 5,
@@ -13,7 +13,7 @@ export default function getStyle(theme={}) {
       backgroundColor: appStyle.calendarBackground
     },
     week: {
-      marginTop: 7,
+      marginTop: 6,
       marginBottom: 7,
       flexDirection: 'row',
       justifyContent: 'space-around'
@@ -21,4 +21,3 @@ export default function getStyle(theme={}) {
     ...(theme[STYLESHEET_ID] || {})
   });
 }
-
