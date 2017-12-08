@@ -60,22 +60,26 @@ class CalendarHeader extends Component {
           onPress={this.substractMonth}
           style={this.style.arrow}
         >
-          {this.props.renderArrow
-            ? this.props.renderArrow('left')
-            : <Image
-                source={require('../img/previous.png')}
-                style={this.style.arrowImage}
-              />}
+          {this.props.renderArrow ? (
+            this.props.renderArrow('left')
+          ) : (
+            <Image
+              source={require('../img/previous.png')}
+              style={this.style.arrowImage}
+            />
+          )}
         </TouchableOpacity>
       );
       rightArrow = (
         <TouchableOpacity onPress={this.addMonth} style={this.style.arrow}>
-          {this.props.renderArrow
-            ? this.props.renderArrow('right')
-            : <Image
-                source={require('../img/next.png')}
-                style={this.style.arrowImage}
-              />}
+          {this.props.renderArrow ? (
+            this.props.renderArrow('right')
+          ) : (
+            <Image
+              source={require('../img/next.png')}
+              style={this.style.arrowImage}
+            />
+          )}
         </TouchableOpacity>
       );
     }
@@ -95,15 +99,14 @@ class CalendarHeader extends Component {
           </View>
           {rightArrow}
         </View>
-        {
-          !this.props.hideDayNames &&
+        {!this.props.hideDayNames && (
           <View style={this.style.week}>
             {this.props.weekNumbers && <Text allowFontScaling={false} style={this.style.dayHeader}></Text>}
             {weekDaysNames.map((day, idx) => (
-              <Text allowFontScaling={false} key={idx} style={this.style.dayHeader} numberOfLines={1}>{day}</Text>
+              <Text allowFontScaling={false} key={idx} style={this.style.dayHeader} numberOfLines={1}>{day.toUpperCase()}</Text>
             ))}
           </View>
-        }
+        )}
       </View>
     );
   }

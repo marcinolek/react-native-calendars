@@ -26,7 +26,7 @@ export const textMonthFontWeight = 'normal'; //400
 export const textDayHeaderFontWeight = 'normal'; //400
 
 export const calendarBackground = foregroundColor;
-export const textSectionTitleColor = '#b6c1cd';
+export const textSectionTitleColor = '#97A1A5';
 export const selectedDayBackgroundColor = textLinkColor;
 export const selectedDayTextColor = foregroundColor;
 export const todayTextColor = textLinkColor;

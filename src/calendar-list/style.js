@@ -1,10 +1,10 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import * as defaultStyle from '../style';
 
 const STYLESHEET_ID = 'stylesheet.calendar-list.main';
 
-export default function getStyle(theme={}) {
-  const appStyle = {...defaultStyle, ...theme};
+export default function getStyle(theme = {}) {
+  const appStyle = { ...defaultStyle, ...theme };
   return StyleSheet.create({
     container: {
       backgroundColor: appStyle.calendarBackground
@@ -20,8 +20,8 @@ export default function getStyle(theme={}) {
       color: appStyle.dayTextColor
     },
     calendar: {
-      paddingLeft: 15,
-      paddingRight: 15
+      paddingLeft: 0,
+      paddingRight: 0
     },
     ...(theme[STYLESHEET_ID] || {})
   });
