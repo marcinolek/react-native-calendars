@@ -21,9 +21,9 @@ export const textDayFontSize = 16;
 export const textMonthFontSize = 16;
 export const textDayHeaderFontSize = 13;
 
-export const textDayFontWeight = 300;
-export const textMonthFontWeight = 300;
-export const textDayHeaderFontWeight = 300;
+export const textDayFontWeight = 'normal'; //400
+export const textMonthFontWeight = 'normal'; //400
+export const textDayHeaderFontWeight = 'normal'; //400
 
 export const calendarBackground = foregroundColor;
 export const textSectionTitleColor = '#b6c1cd';
