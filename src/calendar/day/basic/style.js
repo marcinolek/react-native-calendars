@@ -1,10 +1,10 @@
-import {StyleSheet, Platform} from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.basic';
 
-export default function styleConstructor(theme={}) {
-  const appStyle = {...defaultStyle, ...theme};
+export default function styleConstructor(theme = {}) {
+  const appStyle = { ...defaultStyle, ...theme };
   return StyleSheet.create({
     base: {
       width: 32,
@@ -15,7 +15,7 @@ export default function styleConstructor(theme={}) {
       marginTop: 4,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
-      fontWeight: '300',
+      fontWeight: appStyle.textDayFontWeight,
       color: appStyle.dayTextColor,
       backgroundColor: 'rgba(255, 255, 255, 0)'
     },
