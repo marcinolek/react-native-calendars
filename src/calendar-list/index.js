@@ -219,7 +219,7 @@ class CalendarList extends Component {
           this.state.openDate ? this.getMonthIndex(this.state.openDate) : false
         }
         getItemLayout={this.getItemLayout}
-        scrollsToTop={this.props.scrollsToTop !== undefined ? this.props.scrollsToTop : true}
+        scrollsToTop={this.props.scrollsToTop !== undefined ? this.props.scrollsToTop : false}
       />
     );
   }
