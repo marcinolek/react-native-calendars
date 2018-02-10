@@ -206,7 +206,7 @@ class CalendarList extends Component {
             ? this.props.scrollingEnabled
             : true
         }
-        keyExtractor={(item, index) => index}
+        keyExtractor={(item, index) => String(index)}
         initialScrollIndex={
           this.state.openDate ? this.getMonthIndex(this.state.openDate) : false
         }
