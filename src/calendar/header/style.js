@@ -40,8 +40,8 @@ export default function (theme = {}) {
       justifyContent: "space-around",
     },
     dayHeader: {
-      marginTop: 4,
-      marginBottom: -4,
+      marginTop: 7,
+      marginBottom: -3,
       width: 32,
       textAlign: "center",
       fontSize: appStyle.textDayHeaderFontSize,
