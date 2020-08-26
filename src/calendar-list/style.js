@@ -23,6 +23,15 @@ export default function getStyle(theme = {}) {
       paddingLeft: 0,
       paddingRight: 0
     },
+    staticHeader: {
+      position: 'absolute', 
+      left: 0, 
+      right: 0, 
+      top: 0, 
+      backgroundColor: appStyle.calendarBackground,
+      paddingLeft: 15,
+      paddingRight: 15
+    },
     ...(theme[STYLESHEET_ID] || {})
   });
 }
